@@ -1,0 +1,34 @@
+:root {
+  --grayLine: #d3d3d3;
+  --searchHeight: 40px;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 56px;
+}
+.logo {
+  height: 100%;
+  padding: 13px 14px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--grayLine);
+  height: 42px;
+}
+.input {
+  height: var(--searchHeight);
+  border: none;
+}
+.button {
+  width: 64px;
+  height: var(--searchHeight);
+  background-color: #f8f8f8;
+}
+.fa-solid {
+  font-size: 40px;
+  color: red;
+}
