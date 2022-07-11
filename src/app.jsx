@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import './app.css';
+import SearchBar from './components/search_bar/search_bar';
 import VideoList from './components/video_list/video_list';
 
-function App() {
+function App({ youtube }) {
   const [videos, setVideos] = useState([]);
-  useEffect(() => {
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow',
-    };
 
-    fetch(
-      'https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyBAKfwdqch7EXopfS0k0EaayzTFqTe7-Ss',
-      requestOptions
-    )
-      .then((response) => response.json())
-      .then((result) => setVideos(result.items))
-      .catch((error) => console.log('error', error));
+  useEffect(() => {
+    youtube
+      .mostPopular() //
+      .then((videos) => setVideos(videos));
   }, []);
+
+  const onSearch = (query) => {
+    youtube
+      .search(query) //
+      .then((videos) => setVideos(videos));
+  };
   return (
     <>
+      <SearchBar onSearch={onSearch} />
       <VideoList videos={videos} />
     </>
   );

@@ -1,0 +1,8 @@
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 3rem;
+  margin: 0;
+  background-color: rgb(242, 242, 242);
+}

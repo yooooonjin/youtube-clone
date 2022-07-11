@@ -4,9 +4,11 @@
 }
 
 .searchbar {
+  width: 80%;
+  margin: auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 56px;
 }
 .logo {
@@ -20,15 +22,18 @@
   height: 42px;
 }
 .input {
+  width: 30rem;
   height: var(--searchHeight);
   border: none;
+  padding-left: 1rem;
+  outline: 0;
 }
 .button {
   width: 64px;
   height: var(--searchHeight);
   background-color: #f8f8f8;
+  cursor: pointer;
 }
-.fa-solid {
-  font-size: 40px;
-  color: red;
+.icon {
+  font-size: 1.2rem;
 }

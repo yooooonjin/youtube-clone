@@ -1,0 +1,30 @@
+.container {
+  width: 25%;
+  padding: 0.6rem;
+  cursor: pointer;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  transition: transform 250ms ease-in;
+}
+.video:hover {
+  transform: scale(1.02);
+}
+.thumbnail {
+  width: 100%;
+  height: 70%;
+}
+
+.title,
+.channel {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.title {
+  font-weight: 500;
+  margin-top: 0.8rem;
+}
+.channel {
+  font-size: 1rem;
+}
