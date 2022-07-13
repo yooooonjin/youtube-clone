@@ -1,13 +1,14 @@
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 import styles from './search_bar.module.css';
 
-const SearchBar = (props) => {
+const SearchBar = memo((props) => {
   const inputRef = useRef();
   const onSubmit = (e) => {
     e.preventDefault();
     props.onSearch(inputRef.current.value);
   };
 
+  console.log('검색바s');
   return (
     <form className={styles.searchbar} onSubmit={onSubmit}>
       <img className={styles.logo} src='/images/logo.png' alt='logo' />
@@ -24,6 +25,6 @@ const SearchBar = (props) => {
       </div>
     </form>
   );
-};
+});
 
 export default SearchBar;
