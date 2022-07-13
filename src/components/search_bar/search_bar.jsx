@@ -8,7 +8,6 @@ const SearchBar = memo((props) => {
     props.onSearch(inputRef.current.value);
   };
 
-  console.log('검색바s');
   return (
     <form className={styles.searchbar} onSubmit={onSubmit}>
       <img className={styles.logo} src='/images/logo.png' alt='logo' />

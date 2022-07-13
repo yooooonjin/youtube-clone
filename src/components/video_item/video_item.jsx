@@ -3,7 +3,6 @@ import styles from './video_item.module.css';
 
 const VideoItem = memo(
   ({ video: { snippet }, video, onVideoClick, display }) => {
-    console.log('아이템');
     return (
       <li
         className={`${styles.container} ${
